@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="hibernate.connection.url">jdbc:mysql://192.168.31.33:3306/hspm?characterEncoding=UTF-8</property>
+    <property name="hibernate.connection.username">root</property>
+    <property name="hibernate.connection.password">hlbd0510</property>
+  <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+  <property name="hibernate.c3p0.max_size">200</property>
+  <property name="hibernate.c3p0.min_size">1</property>
+  <property name="hibernate.c3p0.timeout">1800</property>
+  <property name="hibernate.c3p0.max_statements">50</property>
+  <property name="hibernate.show_sql">true</property>
+  <property name="hibernate.hbm2ddl.auto">update</property>
+  <property name="hibernate.connection.autocommit">true</property>
+  <property name="hibernate.format_sql">true</property>
+
+  <mapping class="com.hs.pm.bean.ProjectStart"/>
+  <mapping class="com.hs.pm.bean.ProjectContract"/>
+  <mapping class="com.hs.pm.bean.ProjectReceipt"/>
+  <mapping class="com.hs.pm.bean.ProjectPay"/>
+  <mapping class="com.hs.pm.bean.ProjectFee"/>
+  <mapping class="com.hs.pm.bean.ProjectProgress"/>
+  <mapping class="com.hs.pm.bean.ProjectFinish"/>
+  <mapping class="com.hs.pm.bean.ProjectFinance"/>
+  <mapping class="com.hs.pm.bean.User" />
+  <mapping class="com.hs.pm.bean.Department" />
+  <mapping class="com.hs.pm.bean.Project" />
+
+    </session-factory>
+</hibernate-configuration>
